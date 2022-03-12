@@ -4,6 +4,12 @@ package polylab;
 // LAB 6 - HourlyProgrammer.java
 // HourlyProgrammer class extends Programmer.
 
+/**
+ * 
+HourlyProgrammer.java (programmers who are paid per hour).<br>
+ *
+ */
+
 public class HourlyProgrammer extends Programmer {
 private double wage; // wage per hour
 private double hours; // hours worked for week
@@ -70,7 +76,7 @@ else {
 }                                          
 
 //return String representation of HourlyProgrammer object              
-@Override                                                             
+//@Override                                                             
 
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     

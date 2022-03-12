@@ -4,69 +4,72 @@ package polylab;
 //CommissionProgrammer.java
 //CommissionProgrammer class extends Programmer.
 
-public class CommissionProgrammer extends Programmer { 
-private double grossSales; // gross weekly sales
-private double commissionRate; // commission percentage
+/**
+ * 
+ * CommissionProgrammer.java (programmers who are paid based on commission).<br>
+ *
+ */
+
+public class CommissionProgrammer extends Programmer {
+	private double grossSales; // gross weekly sales
+	private double commissionRate; // commission percentage
 
 //constructor
-public CommissionProgrammer(String firstName, String lastName, 
-String socialSecurityNumber, int month, int year, 
-double grossSales, double commissionRate) {
-super(firstName, lastName, socialSecurityNumber, month, year);
+	public CommissionProgrammer(String firstName, String lastName, String socialSecurityNumber, int month, int year,
+			double grossSales, double commissionRate) {
+		super(firstName, lastName, socialSecurityNumber, month, year);
 
-if (commissionRate <= 0.0 || commissionRate >= 1.0) { // validate 
-  throw new IllegalArgumentException(
-     "Commission rate must be > 0.0 and < 1.0");
-}
+		if (commissionRate <= 0.0 || commissionRate >= 1.0) { // validate
+			throw new IllegalArgumentException("Commission rate must be > 0.0 and < 1.0");
+		}
 
-if (grossSales < 0.0) { // validate
-  throw new IllegalArgumentException("Gross sales must be >= 0.0");
-}
+		if (grossSales < 0.0) { // validate
+			throw new IllegalArgumentException("Gross sales must be >= 0.0");
+		}
 
-this.grossSales = grossSales;
-this.commissionRate = commissionRate;
-} 
+		this.grossSales = grossSales;
+		this.commissionRate = commissionRate;
+	}
 
 //set gross sales amount on the creation of apps
-public void setGrossSales(double grossSales) {
-if (grossSales < 0.0) { // validate
-  throw new IllegalArgumentException("Gross sales must be >= 0.0");
-}
+	public void setGrossSales(double grossSales) {
+		if (grossSales < 0.0) { // validate
+			throw new IllegalArgumentException("Gross sales must be >= 0.0");
+		}
 
-this.grossSales = grossSales;
-} 
+		this.grossSales = grossSales;
+	}
 
 //return gross sales amount 
-public double getGrossSales() {
-return grossSales;
-} 
+	public double getGrossSales() {
+		return grossSales;
+	}
 
 //set commission rate
-public void setCommissionRate(double commissionRate) {
-if (commissionRate <= 0.0 || commissionRate >= 1.0) { // validate
-  throw new IllegalArgumentException(
-     "Commission rate must be > 0.0 and < 1.0");
-}
+	public void setCommissionRate(double commissionRate) {
+		if (commissionRate <= 0.0 || commissionRate >= 1.0) { // validate
+			throw new IllegalArgumentException("Commission rate must be > 0.0 and < 1.0");
+		}
 
-this.commissionRate = commissionRate;
-} 
+		this.commissionRate = commissionRate;
+	}
 
 //return commission rate
-public double getCommissionRate() {
-return commissionRate;
-} 
+	public double getCommissionRate() {
+		return commissionRate;
+	}
 
 //calculate earnings; override abstract method earnings in Programmer
 
-@Override                                                           
-public double earnings() {                                            
-return getCommissionRate() * getGrossSales();                    
-}                                             
+	@Override
+	public double earnings() {
+		return getCommissionRate() * getGrossSales();
+	}
 
 //return String representation of CommissionProgrammer object
 
-@Override      
-                                             
+//@Override      
+
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     
 // INSERT YOUR CODE

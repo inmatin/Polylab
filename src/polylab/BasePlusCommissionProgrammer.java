@@ -3,6 +3,13 @@ package polylab;
 //Lab 6 - BasePlusCommissionProgrammer.java
 //BasePlusCommissionProgrammer class extends CommissionProgrammer.
 
+/**
+ * 
+ BasePlusCommissionProgrammer (extends
+CommissionProgrammer).<br>
+ *
+ */
+
 public class BasePlusCommissionProgrammer extends CommissionProgrammer { 
 private double baseSalary; // base salary per week
 
@@ -37,11 +44,11 @@ return baseSalary;
 //calculate earnings; override method earnings in CommissionProgrammer
 @Override                                                            
 public double earnings() {                                             
-return getBaseSalary() + super.earnings();                        
+return getBaseSalary() + super.earnings();              
 } 
 
 //return String representation of BasePlusCommissionProgrammer object
-@Override     
+//@Override     
                                                       
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     

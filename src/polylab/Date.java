@@ -6,9 +6,10 @@ package polylab;
 //Date class declaration.
 
 /**
+ * Date.java (declaring the date useful for birthday of a programmer).<br>
  * 
  * Note that the programmers irrespective of what form of compensation they have
- * are paid only once every month.
+ * are paid only once every month.<br>
  *
  */
 public class Date {
@@ -34,7 +35,7 @@ public class Date {
 	public int getMonth() {
 		return month;
 	}
-	
+
 	public int getYear() {
 		return year;
 	}

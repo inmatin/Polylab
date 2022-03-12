@@ -4,6 +4,12 @@ package polylab;
 //LAB 6 - SalariedProgrammer.java
 //SalariedProgrammer concrete class extends abstract class Programmer.
 
+/**
+ * 
+ * SalariedProgrammer.java (regular salaried programmers).<br>
+ *
+ */
+
 public class SalariedProgrammer extends Programmer  {
 private double weeklySalary;
 
@@ -43,7 +49,7 @@ return getWeeklySalary();
 }                                             
 
 //return String representation of SalariedProgrammer object   
-@Override        
+//@Override        
                                             
 //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
 //START     

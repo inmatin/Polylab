@@ -11,7 +11,10 @@ programmer.
  */
 import java.util.Scanner;
 
-/** This program uses Scanner to obtain user input */
+/**
+ * MyPaySystemTest.java (provides the main method to test your classes).<br>
+ * This program uses Scanner to obtain user input.<br>
+ */
 
 public class MyPaySystemTest {
 	public static void main(String[] args) {
@@ -40,18 +43,29 @@ public class MyPaySystemTest {
 
 		// START
 		// INSERT CODE
+
+		Programmer[] programmer = { salariedProgrammer, hourlyProgrammer, commissionProgrammer,
+				basePlusCommissionProgrammer };
+
 		// END
 
 		// IMPLEMENT THE USE OF A SCANNER TO GET THE CURRENT MONTH. COMPLETE THIS
 		// PORTION!!!!
 		// START
 		// INSERT SCANNER CODE
+
+		Scanner input = new Scanner(System.in);
+		int month = input.nextInt();
+
+		System.out.print(month);
 		// END
 
 		// TO DO: GET AND VALIDATE THE CURRENT MONTH. COMPLETE THIS PORTION!!!!
 
 		// START
 		// INSERT CODE
+		
+		programmer[1].getBirthMonth();
 		// END
 
 		System.out.println("Programmers processed polymorphically:\n");
