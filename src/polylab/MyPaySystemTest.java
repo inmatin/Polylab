@@ -17,6 +17,11 @@ import java.util.Scanner;
  */
 
 public class MyPaySystemTest {
+
+	/**
+	 * 
+	 * @param args command line arguments are not used by this program.
+	 */
 	public static void main(String[] args) {
 		// create subclass objects
 		SalariedProgrammer salariedProgrammer = new SalariedProgrammer("Emmanuel", "Okoro", "123-11-4567", 6, 1992,
@@ -43,7 +48,9 @@ public class MyPaySystemTest {
 
 		// START
 		// INSERT CODE
-
+		/**
+		 * array of objects to include all the programmers.
+		 */
 		Programmer[] programmer = { salariedProgrammer, hourlyProgrammer, commissionProgrammer,
 				basePlusCommissionProgrammer };
 
@@ -54,27 +61,45 @@ public class MyPaySystemTest {
 		// START
 		// INSERT SCANNER CODE
 
-		Scanner input = new Scanner(System.in);
-		int month = input.nextInt();
-
-		System.out.print(month);
 		// END
 
 		// TO DO: GET AND VALIDATE THE CURRENT MONTH. COMPLETE THIS PORTION!!!!
+		Scanner input = new Scanner(System.in);
+		String go = "yes";
+		int month = 0;
+		while (go.equals("yes")) {
+
+			System.out.print("Enter the current month (1 - 12): ");
+			month = input.nextInt();
+
+			if (month < 1 || month > 12) {
+				System.out.print("Error renter date!!!\n\r");
+			} else
+				go = "no";
+		}
 
 		// START
 		// INSERT CODE
-		
-		programmer[1].getBirthMonth();
+
 		// END
+
+		System.out.println("");
 
 		System.out.println("Programmers processed polymorphically:\n");
 
 		// generically process each element in array
+		/**
+		 * Loop Through an Array with For-Each Loop. used exclusively to loop through
+		 * elements in arrays.
+		 */
 		for (Programmer currentProgrammer : programmer) {
 			System.out.println(currentProgrammer); // invokes toString
 
 			// determine whether element is a BasePlusCommissionProgrammer
+			/**
+			 * instanceof to test whether currentProgrammer is an object of
+			 * BasePlusCommisionProgrammer.
+			 */
 			if (currentProgrammer instanceof BasePlusCommissionProgrammer) {
 				// downcast Programmer reference to
 				// BasePlusCommissionProgrammer reference
@@ -88,15 +113,29 @@ public class MyPaySystemTest {
 			// TO DO: COMPLETE THIS PORTION: if this is the month of the programmer's
 			// birthday, add $500 to his salary
 			// otherwise just state what this programmer currently earned.
+			System.out.printf("earned $%,.2f ", currentProgrammer.earnings());
 
-			// START
-			// INSERT CODE
-			// END
+			if (month == currentProgrammer.getBirthDate().getMonth()) {
+
+				System.out.printf("%s", "plus $500 birthday bonus");
+			}
+			System.out.println("\n");
 		}
 
 		// get type name of each object in programmers array
+		/**
+		 * .length to measure the size of the array.
+		 */
 		for (int j = 0; j < programmer.length; j++) {
 			System.out.printf("Programmer %d is a %s\n", j, programmer[j].getClass().getName());
 		}
+
+		input.close();
 	}
 }
+
+/**
+ * Reference:<br>
+ * https://www.geeksforgeeks.org/for-each-loop-in-java/
+ * https://www.geeksforgeeks.org/length-vs-length-java/
+*/
